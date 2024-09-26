@@ -67,7 +67,7 @@ jobs:
       - name: Push Docker image to Docker
         if: success()
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/emotion2:
+          docker push ${{ secrets.DOCKER_USERNAME }}/emotion2:latest
           
       - name: Deploy to EC2
         if: success()
